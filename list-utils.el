@@ -256,7 +256,9 @@ A hash-table-test is defined with the same name."
 
 ;;;###autoload
 (progn
-  (require 'cl)
+  ;; XXX this fails tests.  But also ... like, I don't care. ~ acdw
+  (require 'cl-lib)
+  (setq cl-old-struct-compat-mode +1)
   (cl-defstruct tconc head tail))
 
 ;;;###autoload
